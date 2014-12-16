@@ -12,6 +12,7 @@ class AdvertContainerViewController: UIViewController {
     var tableViewController: UITableViewController?
     var showingiAd = false
     var bannerBottomConstraint: NSLayoutConstraint?
+	@IBOutlet weak var embeddingView: UIView?
     private var bannerTopOffset: CGFloat {
         get {
             var offset: CGFloat = 0
@@ -30,6 +31,15 @@ class AdvertContainerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		self.automaticallyAdjustsScrollViewInsets = false
+		
+		//Remove default constraints by IB because no constraints were defined in IB.
+		view.removeConstraints(view.constraints())
+		
+		//Make sure embedding view is stretched to enclose entire view.
+		view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[embeddingView]|", options: nil, metrics: nil, views: ["embeddingView": embeddingView!]))
+		view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[embeddingView]|", options: nil, metrics: nil, views: ["embeddingView": embeddingView!]))
 
         if self.childViewControllers.count > 0 {
             if let tableViewController = self.childViewControllers[0] as? UITableViewController {
@@ -38,7 +48,7 @@ class AdvertContainerViewController: UIViewController {
                 self.navigationItem.title = tableViewController.navigationItem.title
             }
         }
-    }
+	}
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -63,6 +73,24 @@ class AdvertContainerViewController: UIViewController {
             self.hideiAds()
         }
     }
+	
+	func recalcCorrectGuidesWithAdditionalBottomSpace(spaceHeight: CGFloat)
+	{
+		let bottomGuide = CGRectGetHeight(self.tabBarController!.tabBar.bounds);
+		let topGuide = CGRectGetHeight(self.navigationController!.navigationBar.bounds) + CGRectGetHeight(UIApplication.sharedApplication().statusBarFrame);
+		
+		if let bottomConstraint = self.bannerBottomConstraint {
+			let bannerTopOffset = bottomGuide + spaceHeight
+			if bottomConstraint.constant != bannerTopOffset {
+				println("Setting banner top offset to \(bannerTopOffset)")
+				bottomConstraint.constant = -bannerTopOffset
+			}
+		}
+		
+		println("Bottom layout guide is \(bottomGuide)")
+		let insets = UIEdgeInsetsMake(topGuide, 0, bottomGuide + spaceHeight, 0)
+		self.updateTableViewInsetsIfRequired(insets)
+	}
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -71,24 +99,20 @@ class AdvertContainerViewController: UIViewController {
 
         if self.showingiAd {
             if let bannerView = AppDelegate.instance.bannerView {
+				
+				bannerView.layoutIfNeeded()
+				
                 let bannerViewHeight = CGRectGetHeight(bannerView.frame)
 
-                if let bottomConstraint = self.bannerBottomConstraint {
-                    let bannerTopOffset = self.bottomLayoutGuide.length + bannerViewHeight
-                    if bottomConstraint.constant != bannerTopOffset {
-                        println("Setting banner top offset to \(bannerTopOffset)")
-                        bottomConstraint.constant = -bannerTopOffset
-                        bannerView.superview?.setNeedsUpdateConstraints()
-                        bannerView.superview?.updateConstraintsIfNeeded()
-                    }
-                }
-
-                println("Bottom layout guide is \(self.bottomLayoutGuide.length)")
-                let insets = UIEdgeInsetsMake(self.topLayoutGuide.length, 0, self.bottomLayoutGuide.length + bannerViewHeight, 0)
-                self.updateTableViewInsetsIfRequired(insets)
-
+				recalcCorrectGuidesWithAdditionalBottomSpace(bannerViewHeight)
+				
+				bannerView.superview?.setNeedsUpdateConstraints()
+				bannerView.superview?.updateConstraintsIfNeeded()
             }
         }
+		else {
+			recalcCorrectGuidesWithAdditionalBottomSpace(0)
+		}
     }
 
     private func updateTableViewInsetsIfRequired(insets: UIEdgeInsets) {
@@ -138,7 +162,6 @@ class AdvertContainerViewController: UIViewController {
                 bannersSuperview.layoutIfNeeded()
 
                 let topInset = self.navigationController?.navigationBar.frame.size.height ?? 0
-                let insets = UIEdgeInsetsMake(topInset, 0, -self.bannerTopOffset, 0)
 
                 // Previously, this values was the height of the banner view, so that it starts off screen.
                 // Setting this to 0 and then doing an animation makes it slide in from below
@@ -146,7 +169,7 @@ class AdvertContainerViewController: UIViewController {
                 bannersSuperview.setNeedsUpdateConstraints()
                 UIView.animateWithDuration(animated ? 0.5 : 0, animations: { () -> Void in
                     // Calling layoutIfNeeded here will animate the layout constraint cosntant change made above
-                    self.updateTableViewInsetsIfRequired(insets)
+                    self.recalcCorrectGuidesWithAdditionalBottomSpace(CGRectGetHeight(bannerView.bounds))
                     bannersSuperview.layoutIfNeeded()
                 })
             } else {
