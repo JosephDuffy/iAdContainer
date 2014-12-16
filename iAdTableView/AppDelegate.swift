@@ -34,6 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ADBannerViewDelegate {
         let bannerView = ADBannerView(adType: ADAdType.Banner)
         bannerView.delegate = self
         bannerView.setTranslatesAutoresizingMaskIntoConstraints(false)
+		//Just for testing because content disappears sometimes from ad view on my machine.
+		bannerView.backgroundColor = UIColor.greenColor()
         self.bannerView = bannerView
     }
 
