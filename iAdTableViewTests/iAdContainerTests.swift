@@ -1,6 +1,6 @@
 //
-//  iAdTableViewTests.swift
-//  iAdTableViewTests
+//  iAdContainerTests.swift
+//  iAdContainer
 //
 //  Created by Joseph Duffy on 16/12/2014.
 //  Copyright (c) 2014 Yetii Ltd. All rights reserved.
@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-class iAdTableViewTests: XCTestCase {
+class iAdContainerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

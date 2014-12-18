@@ -7,16 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D917E2181A423B90001206C2 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D917E2171A423B90001206C2 /* ModalViewController.swift */; };
 		D9541E781A40CFAC00A0747D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9541E771A40CFAC00A0747D /* AppDelegate.swift */; };
-		D9541E7A1A40CFAC00A0747D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9541E791A40CFAC00A0747D /* ViewController.swift */; };
 		D9541E7D1A40CFAC00A0747D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9541E7B1A40CFAC00A0747D /* Main.storyboard */; };
 		D9541E7F1A40CFAD00A0747D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9541E7E1A40CFAD00A0747D /* Images.xcassets */; };
 		D9541E821A40CFAD00A0747D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9541E801A40CFAD00A0747D /* LaunchScreen.xib */; };
-		D9541E8E1A40CFAD00A0747D /* iAdTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9541E8D1A40CFAD00A0747D /* iAdTableViewTests.swift */; };
+		D9541E8E1A40CFAD00A0747D /* iAdContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9541E8D1A40CFAD00A0747D /* iAdContainerTests.swift */; };
 		D9541E981A40D05200A0747D /* ExampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9541E971A40D05200A0747D /* ExampleTableViewController.swift */; };
-		D9541E9A1A40D0E600A0747D /* AdvertContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9541E991A40D0E600A0747D /* AdvertContainerViewController.swift */; };
+		D9541E9A1A40D0E600A0747D /* iAdContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9541E991A40D0E600A0747D /* iAdContainerViewController.swift */; };
 		D9541E9C1A40D1C000A0747D /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9541E9B1A40D1C000A0747D /* iAd.framework */; };
-		D9E7308A1A40D23800425E97 /* AdvertTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E730891A40D23800425E97 /* AdvertTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,20 +29,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D9541E721A40CFAC00A0747D /* iAdTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iAdTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D917E2171A423B90001206C2 /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		D9541E721A40CFAC00A0747D /* iAdContainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iAdContainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9541E761A40CFAC00A0747D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9541E771A40CFAC00A0747D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D9541E791A40CFAC00A0747D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D9541E7C1A40CFAC00A0747D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9541E7E1A40CFAD00A0747D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D9541E811A40CFAD00A0747D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		D9541E871A40CFAD00A0747D /* iAdTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iAdTableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9541E871A40CFAD00A0747D /* iAdContainerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iAdContainerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9541E8C1A40CFAD00A0747D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D9541E8D1A40CFAD00A0747D /* iAdTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iAdTableViewTests.swift; sourceTree = "<group>"; };
+		D9541E8D1A40CFAD00A0747D /* iAdContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iAdContainerTests.swift; sourceTree = "<group>"; };
 		D9541E971A40D05200A0747D /* ExampleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTableViewController.swift; sourceTree = "<group>"; };
-		D9541E991A40D0E600A0747D /* AdvertContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertContainerViewController.swift; sourceTree = "<group>"; };
+		D9541E991A40D0E600A0747D /* iAdContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iAdContainerViewController.swift; sourceTree = "<group>"; };
 		D9541E9B1A40D1C000A0747D /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		D9E730891A40D23800425E97 /* AdvertTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +66,8 @@
 		D9541E691A40CFAC00A0747D = {
 			isa = PBXGroup;
 			children = (
-				D9541E741A40CFAC00A0747D /* iAdTableView */,
-				D9541E8A1A40CFAD00A0747D /* iAdTableViewTests */,
+				D9541E741A40CFAC00A0747D /* iAdContainer */,
+				D9541E8A1A40CFAD00A0747D /* iAdContainerTests */,
 				D9541E731A40CFAC00A0747D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,25 +75,25 @@
 		D9541E731A40CFAC00A0747D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D9541E721A40CFAC00A0747D /* iAdTableView.app */,
-				D9541E871A40CFAD00A0747D /* iAdTableViewTests.xctest */,
+				D9541E721A40CFAC00A0747D /* iAdContainer.app */,
+				D9541E871A40CFAD00A0747D /* iAdContainerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D9541E741A40CFAC00A0747D /* iAdTableView */ = {
+		D9541E741A40CFAC00A0747D /* iAdContainer */ = {
 			isa = PBXGroup;
 			children = (
-				D9541E991A40D0E600A0747D /* AdvertContainerViewController.swift */,
-				D9E730891A40D23800425E97 /* AdvertTableViewController.swift */,
+				D9541E991A40D0E600A0747D /* iAdContainerViewController.swift */,
 				D9541E771A40CFAC00A0747D /* AppDelegate.swift */,
-				D9541E791A40CFAC00A0747D /* ViewController.swift */,
+				D9541E971A40D05200A0747D /* ExampleTableViewController.swift */,
+				D917E2171A423B90001206C2 /* ModalViewController.swift */,
 				D9541E7B1A40CFAC00A0747D /* Main.storyboard */,
 				D9541E7E1A40CFAD00A0747D /* Images.xcassets */,
 				D9541E801A40CFAD00A0747D /* LaunchScreen.xib */,
 				D9541E751A40CFAC00A0747D /* Supporting Files */,
-				D9541E971A40D05200A0747D /* ExampleTableViewController.swift */,
 			);
+			name = iAdContainer;
 			path = iAdTableView;
 			sourceTree = "<group>";
 		};
@@ -108,12 +106,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D9541E8A1A40CFAD00A0747D /* iAdTableViewTests */ = {
+		D9541E8A1A40CFAD00A0747D /* iAdContainerTests */ = {
 			isa = PBXGroup;
 			children = (
-				D9541E8D1A40CFAD00A0747D /* iAdTableViewTests.swift */,
+				D9541E8D1A40CFAD00A0747D /* iAdContainerTests.swift */,
 				D9541E8B1A40CFAD00A0747D /* Supporting Files */,
 			);
+			name = iAdContainerTests;
 			path = iAdTableViewTests;
 			sourceTree = "<group>";
 		};
@@ -128,9 +127,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D9541E711A40CFAC00A0747D /* iAdTableView */ = {
+		D9541E711A40CFAC00A0747D /* iAdContainer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D9541E911A40CFAD00A0747D /* Build configuration list for PBXNativeTarget "iAdTableView" */;
+			buildConfigurationList = D9541E911A40CFAD00A0747D /* Build configuration list for PBXNativeTarget "iAdContainer" */;
 			buildPhases = (
 				D9541E6E1A40CFAC00A0747D /* Sources */,
 				D9541E6F1A40CFAC00A0747D /* Frameworks */,
@@ -140,14 +139,14 @@
 			);
 			dependencies = (
 			);
-			name = iAdTableView;
+			name = iAdContainer;
 			productName = iAdTableView;
-			productReference = D9541E721A40CFAC00A0747D /* iAdTableView.app */;
+			productReference = D9541E721A40CFAC00A0747D /* iAdContainer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D9541E861A40CFAD00A0747D /* iAdTableViewTests */ = {
+		D9541E861A40CFAD00A0747D /* iAdContainerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D9541E941A40CFAD00A0747D /* Build configuration list for PBXNativeTarget "iAdTableViewTests" */;
+			buildConfigurationList = D9541E941A40CFAD00A0747D /* Build configuration list for PBXNativeTarget "iAdContainerTests" */;
 			buildPhases = (
 				D9541E831A40CFAD00A0747D /* Sources */,
 				D9541E841A40CFAD00A0747D /* Frameworks */,
@@ -158,9 +157,9 @@
 			dependencies = (
 				D9541E891A40CFAD00A0747D /* PBXTargetDependency */,
 			);
-			name = iAdTableViewTests;
+			name = iAdContainerTests;
 			productName = iAdTableViewTests;
-			productReference = D9541E871A40CFAD00A0747D /* iAdTableViewTests.xctest */;
+			productReference = D9541E871A40CFAD00A0747D /* iAdContainerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -181,7 +180,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D9541E6D1A40CFAC00A0747D /* Build configuration list for PBXProject "iAdTableView" */;
+			buildConfigurationList = D9541E6D1A40CFAC00A0747D /* Build configuration list for PBXProject "iAdContainer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -194,8 +193,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D9541E711A40CFAC00A0747D /* iAdTableView */,
-				D9541E861A40CFAD00A0747D /* iAdTableViewTests */,
+				D9541E711A40CFAC00A0747D /* iAdContainer */,
+				D9541E861A40CFAD00A0747D /* iAdContainerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -226,9 +225,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9541E981A40D05200A0747D /* ExampleTableViewController.swift in Sources */,
-				D9541E7A1A40CFAC00A0747D /* ViewController.swift in Sources */,
-				D9541E9A1A40D0E600A0747D /* AdvertContainerViewController.swift in Sources */,
-				D9E7308A1A40D23800425E97 /* AdvertTableViewController.swift in Sources */,
+				D917E2181A423B90001206C2 /* ModalViewController.swift in Sources */,
+				D9541E9A1A40D0E600A0747D /* iAdContainerViewController.swift in Sources */,
 				D9541E781A40CFAC00A0747D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,7 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9541E8E1A40CFAD00A0747D /* iAdTableViewTests.swift in Sources */,
+				D9541E8E1A40CFAD00A0747D /* iAdContainerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +244,7 @@
 /* Begin PBXTargetDependency section */
 		D9541E891A40CFAD00A0747D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D9541E711A40CFAC00A0747D /* iAdTableView */;
+			target = D9541E711A40CFAC00A0747D /* iAdContainer */;
 			targetProxy = D9541E881A40CFAD00A0747D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -356,7 +354,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iAdTableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = iAdContainer;
 			};
 			name = Debug;
 		};
@@ -366,7 +364,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iAdTableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = iAdContainer;
 			};
 			name = Release;
 		};
@@ -384,8 +382,8 @@
 				);
 				INFOPLIST_FILE = iAdTableViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iAdTableView.app/iAdTableView";
+				PRODUCT_NAME = iAdContainerTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iAdContainer.app/iAdContainer";
 			};
 			name = Debug;
 		};
@@ -399,15 +397,15 @@
 				);
 				INFOPLIST_FILE = iAdTableViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iAdTableView.app/iAdTableView";
+				PRODUCT_NAME = iAdContainerTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iAdContainer.app/iAdContainer";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D9541E6D1A40CFAC00A0747D /* Build configuration list for PBXProject "iAdTableView" */ = {
+		D9541E6D1A40CFAC00A0747D /* Build configuration list for PBXProject "iAdContainer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D9541E8F1A40CFAD00A0747D /* Debug */,
@@ -416,7 +414,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D9541E911A40CFAD00A0747D /* Build configuration list for PBXNativeTarget "iAdTableView" */ = {
+		D9541E911A40CFAD00A0747D /* Build configuration list for PBXNativeTarget "iAdContainer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D9541E921A40CFAD00A0747D /* Debug */,
@@ -425,7 +423,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D9541E941A40CFAD00A0747D /* Build configuration list for PBXNativeTarget "iAdTableViewTests" */ = {
+		D9541E941A40CFAD00A0747D /* Build configuration list for PBXNativeTarget "iAdContainerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D9541E951A40CFAD00A0747D /* Debug */,

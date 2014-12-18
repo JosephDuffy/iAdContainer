@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  iAdTableView
+//  iAdContainer
 //
 //  Created by Joseph Duffy on 16/12/2014.
 //  Copyright (c) 2014 Yetii Ltd. All rights reserved.
@@ -34,12 +34,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ADBannerViewDelegate {
         let bannerView = ADBannerView(adType: ADAdType.Banner)
         bannerView.delegate = self
         bannerView.setTranslatesAutoresizingMaskIntoConstraints(false)
-		//Just for testing because content disappears sometimes from ad view on my machine.
-		bannerView.backgroundColor = UIColor.greenColor()
         self.bannerView = bannerView
     }
 
-    //MARK:- ADBannerViewDelegate methods
+    // MARK:- ADBannerViewDelegate methods
 
     func bannerViewDidLoadAd(banner: ADBannerView!) {
         NSNotificationCenter.defaultCenter().postNotificationName("BannerViewDidLoadAd", object: self)
